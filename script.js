@@ -1,21 +1,63 @@
-const revealTargets = document.querySelectorAll("[data-reveal]");
+const revealTargets = Array.from(document.querySelectorAll("[data-reveal]"));
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.14 }
-);
+const revealSection = (section) => {
+  if (!section) {
+    return;
+  }
 
-revealTargets.forEach((section, index) => {
-  section.style.transitionDelay = `${index * 90}ms`;
-  revealObserver.observe(section);
-});
+  section.classList.add("in-view");
+};
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          revealSection(entry.target);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.08,
+      rootMargin: "0px 0px -8% 0px",
+    }
+  );
+
+  revealTargets.forEach((section, index) => {
+    section.style.transitionDelay = `${index * 90}ms`;
+    revealObserver.observe(section);
+  });
+
+  // Mobile Safari can occasionally miss observer callbacks after anchor jumps.
+  // This keeps target sections from remaining fully transparent.
+  window.addEventListener("hashchange", () => {
+    const target = document.querySelector(window.location.hash);
+    if (target?.matches("[data-reveal]")) {
+      revealSection(target);
+    }
+  });
+
+  window.addEventListener("load", () => {
+    const hashedTarget = window.location.hash ? document.querySelector(window.location.hash) : null;
+    if (hashedTarget?.matches("[data-reveal]")) {
+      revealSection(hashedTarget);
+    }
+
+    window.setTimeout(() => {
+      revealTargets.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          revealSection(section);
+        }
+      });
+    }, 250);
+  });
+} else {
+  revealTargets.forEach((section) => {
+    revealSection(section);
+  });
+}
 
 const yearNode = document.getElementById("year");
 if (yearNode) {
@@ -478,6 +520,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
 
     event.preventDefault();
+    if (targetElement.matches("[data-reveal]")) {
+      revealSection(targetElement);
+    }
     targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
