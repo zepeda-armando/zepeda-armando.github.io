@@ -32,7 +32,17 @@
     <main>
       <section id="home" class="hero">
         <div class="hero-bg" aria-hidden="true">
-          <video class="hero-video" autoplay muted playsinline preload="metadata">
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            playsinline
+            webkit-playsinline="true"
+            preload="metadata"
+            disablepictureinpicture
+            disableremoteplayback
+            tabindex="-1"
+          >
             <source src="./assets/superEpicTrailer.mp4" type="video/mp4" />
           </video>
           <div class="hero-object hero-object-one"></div>
@@ -515,14 +525,14 @@
                 <p class="trident-reel-kicker">Project Trident Photo Reel</p>
                 <h3>Inside Trident.</h3>
               </div>
-
-              <div class="trident-reel-controls" aria-label="Trident reel navigation">
-                <button class="trident-reel-nav" type="button" data-trident-prev aria-label="Previous Trident reel card">&lsaquo;</button>
-                <button class="trident-reel-nav" type="button" data-trident-next aria-label="Next Trident reel card">&rsaquo;</button>
-              </div>
             </div>
 
             <div class="trident-reel-showcase" data-trident-reel tabindex="0">
+              <div class="trident-reel-controls trident-reel-controls-sides" aria-label="Trident reel navigation">
+                <button class="trident-reel-nav" type="button" data-trident-prev aria-label="Previous Trident reel card">&lsaquo;</button>
+                <button class="trident-reel-nav" type="button" data-trident-next aria-label="Next Trident reel card">&rsaquo;</button>
+              </div>
+
               <article class="trident-reel-panel trident-reel-panel-dark" data-trident-card>
                 <div class="trident-reel-panel-copy">
                   <p class="trident-reel-panel-kicker">Platform View</p>
@@ -637,21 +647,17 @@
           <div class="photo-book-shell">
             <div class="photo-book-head">
               <div class="photo-book-intro">
-                <p class="photo-book-kicker">Project Photo Book</p>
-                <h2>Project Photo Book</h2>
-                <p class="photo-book-lead">
-                  A premium visual walkthrough of the boards, bench work, bring-up moments, and integration details that define the
-                  portfolio.
-                </p>
-              </div>
-
-              <div class="photo-book-controls" aria-label="Photo Book navigation">
-                <button class="photo-book-nav" type="button" data-photo-book-prev aria-label="Previous showcase card">&lsaquo;</button>
-                <button class="photo-book-nav" type="button" data-photo-book-next aria-label="Next showcase card">&rsaquo;</button>
+                <h2>Photo Book</h2>
+                <p class="photo-book-lead">Extra moments captured.</p>
               </div>
             </div>
 
             <div class="photo-book-showcase" data-photo-book tabindex="0">
+              <div class="photo-book-controls photo-book-controls-sides" aria-label="Photo Book navigation">
+                <button class="photo-book-nav" type="button" data-photo-book-prev aria-label="Previous showcase card">&lsaquo;</button>
+                <button class="photo-book-nav" type="button" data-photo-book-next aria-label="Next showcase card">&rsaquo;</button>
+              </div>
+
               <article class="photo-book-panel photo-book-panel-dark photo-book-panel-team" data-photo-book-card>
                 <div class="photo-book-panel-copy">
                   <p class="photo-book-panel-kicker">Operations</p>

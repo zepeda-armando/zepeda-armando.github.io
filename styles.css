@@ -167,6 +167,10 @@ a {
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%) contrast(1.08) brightness(0.52);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .hero-bg::after {
@@ -1351,6 +1355,18 @@ h1 span {
   gap: 0.65rem;
 }
 
+.photo-book-controls-sides {
+  position: absolute;
+  inset: 50% -1.6rem auto;
+  transform: translateY(-50%);
+  z-index: 7;
+  width: calc(100% + 3.2rem);
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  pointer-events: none;
+}
+
 .photo-book-nav {
   width: 54px;
   height: 54px;
@@ -1364,6 +1380,7 @@ h1 span {
   cursor: pointer;
   box-shadow: 0 16px 34px rgba(20, 28, 34, 0.1);
   transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 280ms ease, background 280ms ease;
+  pointer-events: auto;
 }
 
 .photo-book-nav:hover,
@@ -1667,6 +1684,18 @@ h1 span {
   gap: 0.65rem;
 }
 
+.trident-reel-controls-sides {
+  position: absolute;
+  inset: 50% -1.6rem auto;
+  transform: translateY(-50%);
+  z-index: 7;
+  width: calc(100% + 3.2rem);
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  pointer-events: none;
+}
+
 .trident-reel-nav {
   width: 54px;
   height: 54px;
@@ -1680,6 +1709,7 @@ h1 span {
   cursor: pointer;
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
   transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 280ms ease, background 280ms ease;
+  pointer-events: auto;
 }
 
 .trident-reel-nav:hover,
