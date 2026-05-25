@@ -2343,6 +2343,50 @@ h1 span {
     width: calc(100% - 1.2rem);
   }
 
+  .hsp-experience-banner {
+    margin-bottom: 1rem;
+  }
+
+  .lineup-kicker {
+    margin-top: 0.3rem;
+    font-size: 0.72rem;
+  }
+
+  .program-overview {
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .program-overview-card {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 0.8rem;
+  }
+
+  .program-overview-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .program-overview-role {
+    font-size: 0.93rem;
+    line-height: 1.35;
+  }
+
+  .program-overview-summary {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .program-overview-meta {
+    display: none;
+  }
+
+  .hsp-title {
+    font-size: clamp(1.8rem, 9vw, 2.7rem);
+    line-height: 0.98;
+  }
+
   .project-lineup {
     padding-bottom: 4.4rem;
   }
@@ -2390,8 +2434,18 @@ h1 span {
     width: fit-content;
   }
 
+  .pad-controller-showcase {
+    margin-top: 1.25rem;
+    gap: 0.75rem;
+  }
+
+  .pad-controller-media {
+    min-height: auto;
+  }
+
   .pcb-slide img {
-    height: 310px;
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .pcb-nav {
@@ -2402,6 +2456,42 @@ h1 span {
 
   .pcb-hint {
     display: none;
+  }
+
+  .pad-controller-copy {
+    padding: 1rem 0.95rem;
+  }
+
+  .project-brand {
+    gap: 0.55rem;
+    padding: 0.36rem 0.62rem 0.36rem 0.42rem;
+  }
+
+  .project-brand img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .project-brand p {
+    font-size: 0.76rem;
+  }
+
+  .project-label {
+    font-size: 0.67rem;
+    line-height: 1.35;
+  }
+
+  .pad-controller-copy h3 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .pad-controller-copy p {
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+
+  .pad-highlights li {
+    font-size: 0.92rem;
   }
 
   .feature-grid {
