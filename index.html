@@ -1,0 +1,754 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armando Zepeda Electrical Engineering Portfolio</title>
+    <meta
+      name="description"
+      content="Armando Zepeda Electrical Engineering portfolio highlighting autonomous systems, controls, and technical execution."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Armando Zepeda home">
+        <span class="brand-mark" aria-hidden="true">AZ</span>
+        <span class="brand-text">ARMANDO ZEPEDA</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#systems">What I build</a>
+        <a href="#about">Who I am</a>
+        <a href="#experience">Work Experience</a>
+      </nav>
+
+      <div class="top-actions">
+        <a class="outline-btn" href="#contact">CONTACT ARMANDO</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <video class="hero-video" autoplay muted playsinline preload="metadata">
+            <source src="./assets/superEpicTrailer.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-object hero-object-one"></div>
+          <div class="hero-object hero-object-two"></div>
+          <div class="hero-horizon"></div>
+        </div>
+
+        <div class="hero-content">
+          <h1>
+            <span>Armando Zepeda Electrical Engineering Portfolio</span>
+          </h1>
+          <p class="hero-subtitle">Designing robust PCB hardware for real-world deployment.</p>
+        </div>
+
+        <a class="scroll-cue" href="#systems">
+          <span>Scroll to Explore</span>
+          <span class="arrow" aria-hidden="true">&darr;</span>
+        </a>
+      </section>
+
+      <section id="systems" class="systems section-light" data-reveal>
+        <div class="inner">
+          <div class="hsp-experience-banner" aria-label="Club and Project Experience">
+            <p class="lineup-kicker">Club &amp; Project Experience</p>
+            <div class="program-overview" aria-label="Engineering leadership roles">
+              <article class="program-overview-card">
+                <img src="./assets/hsp-program-logo.png" alt="Highlander Space Program logo" loading="lazy" />
+                <div class="program-overview-copy">
+                  <p class="program-overview-role">Highlander Space Program | Avionics Hardware Lead</p>
+                  <p class="program-overview-summary">
+                    Supporting liquid rocket avionics through PCB design, bring-up, validation, and field integration across the test stack.
+                  </p>
+                </div>
+                <p class="program-overview-meta">HSP</p>
+              </article>
+              <article class="program-overview-card">
+                <img src="./assets/auv-project-logo.png" alt="Project Trident logo" loading="lazy" />
+                <div class="program-overview-copy">
+                  <p class="program-overview-role">Project Trident | Hardware Design Lead</p>
+                  <p class="program-overview-summary">
+                    Designing custom underwater vehicle electronics spanning power, control, integration, and propulsion-system hardware.
+                  </p>
+                </div>
+                <p class="program-overview-meta">AUV</p>
+              </article>
+            </div>
+            <p class="hsp-title">Explore My Projects.</p>
+          </div>
+
+          <div class="pad-controller-showcase">
+            <div class="pad-controller-media">
+              <div class="pcb-carousel" data-carousel aria-label="Pad Controller photo carousel">
+                <div class="pcb-carousel-viewport" tabindex="0">
+                  <div class="pcb-carousel-track">
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/pad-controller-render.png"
+                        alt="Pad Controller PCB render from design phase"
+                        loading="lazy"
+                      />
+                      <figcaption>PCB CAD render</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/pad-controller-enclosure.jpg"
+                        alt="Pad Controller mounted inside field enclosure"
+                        loading="lazy"
+                      />
+                      <figcaption>Field enclosure integration</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/pad-controller-field.jpg"
+                        alt="Pad Controller deployed in outdoor operations setup"
+                        loading="lazy"
+                      />
+                      <figcaption>Operational deployment setup</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <button class="pcb-nav prev" type="button" aria-label="Previous Pad Controller photo">&lsaquo;</button>
+                <button class="pcb-nav next" type="button" aria-label="Next Pad Controller photo">&rsaquo;</button>
+                <div class="pcb-carousel-footer">
+                  <div class="pcb-dots" role="tablist" aria-label="Pad Controller slide selector"></div>
+                  <p class="pcb-hint">Use arrows</p>
+                </div>
+              </div>
+            </div>
+
+            <article class="pad-controller-copy">
+              <div class="project-brand">
+                <img src="./assets/hsp-program-logo.png" alt="Highlander Space Program logo" loading="lazy" />
+                <p>Highlander Space Program</p>
+              </div>
+              <p class="project-label">Project Poseidon // Avionics Hardware Lead</p>
+              <h3>Pad Controller</h3>
+              <p>
+                Designed a 4-layer STM32-based Pad Controller PCB to command liquid rocket valve actuation and ignition. Integrated
+                CAN and UART interfaces with ground support equipment for reliable control and telemetry flow during operations.
+              </p>
+              <p>
+                Defined PCB stackup, component selection, and mixed-signal routing, then supported hardware bring-up and validation
+                using staged power-up, oscilloscopes, multimeters, and bench supplies before field integration. Contributed to bring-up
+                and verification across 10+ avionics PCBs in the campaign.
+              </p>
+              <ul class="pad-highlights">
+                <li>4-layer STM32 mixed-signal control board</li>
+                <li>CAN + UART integration with GSE systems</li>
+                <li>Supported cold-flow and static-fire test campaigns</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="pad-controller-showcase project-showcase-secondary">
+            <div class="pad-controller-media">
+              <div class="pcb-carousel" data-carousel aria-label="GIC PCB photo carousel">
+                <div class="pcb-carousel-viewport" tabindex="0">
+                  <div class="pcb-carousel-track">
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/gic-01-front-render.png"
+                        alt="GIC PCB front-side CAD render"
+                        loading="lazy"
+                      />
+                      <figcaption>GIC front 3D CAD view</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/gic-02-back-render.png"
+                        alt="GIC PCB back-side CAD render"
+                        loading="lazy"
+                      />
+                      <figcaption>GIC back 3D CAD view</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/gic-03-can-test-bench.png"
+                        alt="GIC bench setup with STM32 development hardware and wiring"
+                        loading="lazy"
+                      />
+                      <figcaption>CAN test bench and bring-up setup</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/gic-04-dev-integration.png"
+                        alt="Multi-system development environment used to test GIC firmware and communications"
+                        loading="lazy"
+                      />
+                      <figcaption>Firmware, tools, and integration test environment</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/gic-05-assembly.png"
+                        alt="Assembled GIC PCB with mounted interfaces and communication modules"
+                        loading="lazy"
+                      />
+                      <figcaption>GIC assembly and hardware validation state</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <button class="pcb-nav prev" type="button" aria-label="Previous GIC PCB photo">&lsaquo;</button>
+                <button class="pcb-nav next" type="button" aria-label="Next GIC PCB photo">&rsaquo;</button>
+                <div class="pcb-carousel-footer">
+                  <div class="pcb-dots" role="tablist" aria-label="GIC PCB slide selector"></div>
+                  <p class="pcb-hint">Use arrows</p>
+                </div>
+              </div>
+            </div>
+
+            <article class="pad-controller-copy">
+              <div class="project-brand">
+                <img src="./assets/hsp-program-logo.png" alt="Highlander Space Program logo" loading="lazy" />
+                <p>Highlander Space Program</p>
+              </div>
+              <p class="project-label">Project Clementine // Ground Information Controller</p>
+              <h3>Ground Information Controller (GIC)</h3>
+              <p>
+                Designed an STM32-based ground interface PCB integrating Ethernet, CAN, UART, USB, SPI Flash, and MicroSD to support
+                engine telemetry, valve control, and high/full-speed data logging in a single field-ready controller.
+              </p>
+              <p>
+                Completed the workflow from CAD to assembly and test bench validation, including CAN communications verification,
+                firmware integration, and end-to-end interface bring-up across the ground test stack.
+              </p>
+              <ul class="pad-highlights">
+                <li>Integrated Ethernet, CAN, UART, USB, SPI Flash, and MicroSD</li>
+                <li>STM32 control architecture for telemetry and actuator pathways</li>
+                <li>Hands-on assembly, debug, and communication bench testing</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="pad-controller-showcase project-showcase-secondary">
+            <div class="pad-controller-media">
+              <div class="pcb-carousel" data-carousel aria-label="GIC LITE PCB photo carousel">
+                <div class="pcb-carousel-viewport" tabindex="0">
+                  <div class="pcb-carousel-track">
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/gic-lite-render.png"
+                        alt="GIC LITE PCB CAD render showing the revised compact ground interface design"
+                        loading="lazy"
+                      />
+                      <figcaption>Revised compact GIC LITE CAD layout</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/gic-lite-board.jpg"
+                        alt="Fabricated GIC LITE PCB panel photographed on a cutting mat"
+                        loading="lazy"
+                      />
+                      <figcaption>Fabricated GIC LITE board with reduced footprint</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <button class="pcb-nav prev" type="button" aria-label="Previous GIC LITE PCB photo">&lsaquo;</button>
+                <button class="pcb-nav next" type="button" aria-label="Next GIC LITE PCB photo">&rsaquo;</button>
+                <div class="pcb-carousel-footer">
+                  <div class="pcb-dots" role="tablist" aria-label="GIC LITE PCB slide selector"></div>
+                  <p class="pcb-hint">Use arrows</p>
+                </div>
+              </div>
+            </div>
+
+            <article class="pad-controller-copy">
+              <div class="project-brand">
+                <img src="./assets/hsp-program-logo.png" alt="Highlander Space Program logo" loading="lazy" />
+                <p>Highlander Space Program</p>
+              </div>
+              <p class="project-label">Project Clementine // Ground Interface Revision</p>
+              <h3>GIC LITE</h3>
+              <p>
+                Revised the ground interface PCB into a more compact GIC LITE architecture, reducing board area by 57% while
+                expanding control and protection capability and reducing BOM cost.
+              </p>
+              <p>
+                Added 3-channel MOSFET servo actuation, dual pyro ignition firing circuits, fused protection on the 3.3V and 8V
+                rails, and high-side MOSFET load switching.
+              </p>
+              <ul class="pad-highlights">
+                <li>57% smaller board footprint than the previous ground interface revision</li>
+                <li>3-channel servo actuation plus dual pyro ignition firing support</li>
+                <li>Fused rails, high-side load switching, and Ethernet telemetry relay</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="pad-controller-showcase project-showcase-secondary">
+            <div class="pad-controller-media">
+              <div class="pcb-carousel" data-carousel aria-label="Sensor Panel Connector Interface photo carousel">
+                <div class="pcb-carousel-viewport" tabindex="0">
+                  <div class="pcb-carousel-track">
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/sensorpanel-integration.jpg"
+                        alt="Sensor panel connector interface installed in the DAQ box"
+                        loading="lazy"
+                      />
+                      <figcaption>DAQ box integration with the installed sensor panel connector interface</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/sensorpanel-4pin-board.png"
+                        alt="4-pin connector PCB used in the sensor panel interface set"
+                        loading="lazy"
+                      />
+                      <figcaption>4-pin connector PCB for sensor channels into the DAQ box</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/sensorpanel-3pin-board.png"
+                        alt="3-pin connector PCB used in the sensor panel interface set"
+                        loading="lazy"
+                      />
+                      <figcaption>3-pin connector PCB for sensor panel integration</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/sensorpanel-2pin-board.png"
+                        alt="2-pin connector PCB used in the sensor panel interface set"
+                        loading="lazy"
+                      />
+                      <figcaption>2-pin connector PCB for lower-pin-count sensor connections</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <button class="pcb-nav prev" type="button" aria-label="Previous Sensor Panel Connector Interface photo">&lsaquo;</button>
+                <button class="pcb-nav next" type="button" aria-label="Next Sensor Panel Connector Interface photo">&rsaquo;</button>
+                <div class="pcb-carousel-footer">
+                  <div class="pcb-dots" role="tablist" aria-label="Sensor Panel Connector Interface slide selector"></div>
+                  <p class="pcb-hint">Use arrows</p>
+                </div>
+              </div>
+            </div>
+
+            <article class="pad-controller-copy">
+              <div class="project-brand">
+                <img src="./assets/hsp-program-logo.png" alt="Highlander Space Program logo" loading="lazy" />
+                <p>Highlander Space Program</p>
+              </div>
+              <p class="project-label">Project Clementine // Embedded Hardware Integration</p>
+              <h3>Sensor Panel Connector Interface</h3>
+              <p>
+                Designed a sensor panel connector interface for the DAQ box, creating a clean and serviceable front-end connection
+                point between external sensors and the data acquisition hardware.
+              </p>
+              <p>
+                The interface set included dedicated PCB layouts for 4-pin, 3-pin, and 2-pin connector groups, allowing each sensor
+                channel type to integrate into the enclosure with clear routing, easier troubleshooting, and more reliable system
+                bring-up during test operations.
+              </p>
+              <ul class="pad-highlights">
+                <li>Integrated sensor-panel interface directly into the DAQ box</li>
+                <li>Custom connector PCBs for 4-pin, 3-pin, and 2-pin interfaces</li>
+                <li>Cleaner routing, simpler maintenance, and faster hardware debug</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="pad-controller-showcase project-showcase-secondary">
+            <div class="pad-controller-media">
+              <div class="pcb-carousel" data-carousel aria-label="Servo Board PCB photo carousel">
+                <div class="pcb-carousel-viewport" tabindex="0">
+                  <div class="pcb-carousel-track">
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/servo-board-front-render.png"
+                        alt="Servo board PCB front-side CAD render with five servo channels"
+                        loading="lazy"
+                      />
+                      <figcaption>Front-side CAD render for the multi-channel servo control board</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/servo-board-back-render.png"
+                        alt="Servo board PCB back-side CAD render"
+                        loading="lazy"
+                      />
+                      <figcaption>Back-side CAD render showing routing and board layout</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/servo-board-fabricated.jpg"
+                        alt="Fabricated servo board PCB photographed after manufacturing"
+                        loading="lazy"
+                      />
+                      <figcaption>Fabricated servo board after PCB manufacturing</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <button class="pcb-nav prev" type="button" aria-label="Previous Servo Board PCB photo">&lsaquo;</button>
+                <button class="pcb-nav next" type="button" aria-label="Next Servo Board PCB photo">&rsaquo;</button>
+                <div class="pcb-carousel-footer">
+                  <div class="pcb-dots" role="tablist" aria-label="Servo Board PCB slide selector"></div>
+                  <p class="pcb-hint">Use arrows</p>
+                </div>
+              </div>
+            </div>
+
+            <article class="pad-controller-copy">
+              <div class="project-brand">
+                <img src="./assets/hsp-program-logo.png" alt="Highlander Space Program logo" loading="lazy" />
+                <p>Highlander Space Program</p>
+              </div>
+              <p class="project-label">Project Clementine // Actuation Control Hardware</p>
+              <h3>Servo Board PCB</h3>
+              <p>
+                Designed a dedicated servo control PCB to drive multiple actuation channels from a compact embedded platform, combining
+                local control electronics, connectorized outputs, and clean routing for reliable subsystem integration.
+              </p>
+              <p>
+                Developed the board from CAD through fabrication, building out the multi-channel servo pathway alongside CAN-linked
+                interfaces and power circuitry to support bench validation and future integration into larger avionics and controls
+                systems.
+              </p>
+              <ul class="pad-highlights">
+                <li>Multi-channel servo actuation board with connectorized outputs</li>
+                <li>Integrated control, power, and CAN-linked interface architecture</li>
+                <li>Carried from PCB layout to manufactured hardware</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="pad-controller-showcase project-showcase-secondary project-showcase-distinct">
+            <div class="pad-controller-media">
+              <div class="pcb-carousel" data-carousel aria-label="Motor Board PCB photo carousel">
+                <div class="pcb-carousel-viewport" tabindex="0">
+                  <div class="pcb-carousel-track">
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/motor-board-01-cad-front.png"
+                        alt="Motor board PCB top-side CAD layout"
+                        loading="lazy"
+                      />
+                      <figcaption>Motor board CAD render (top)</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/motor-board-02-cad-back.png"
+                        alt="Motor board PCB back-side CAD layout"
+                        loading="lazy"
+                      />
+                      <figcaption>Motor board CAD render (back)</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/motor-board-03-bench-powerup.png"
+                        alt="Motor board bench bring-up with lab power supply"
+                        loading="lazy"
+                      />
+                      <figcaption>Bench power-up and first electrical validation</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/motor-board-04-microscope-inspection.png"
+                        alt="Microscope inspection of motor board solder joints"
+                        loading="lazy"
+                      />
+                      <figcaption>Microscope inspection and solder-quality checks</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <img
+                        src="./assets/motor-board-05-system-integration.png"
+                        alt="Motor board integrated into Trident platform enclosure"
+                        loading="lazy"
+                      />
+                      <figcaption>System integration inside the Trident test platform</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <button class="pcb-nav prev" type="button" aria-label="Previous Motor Board photo">&lsaquo;</button>
+                <button class="pcb-nav next" type="button" aria-label="Next Motor Board photo">&rsaquo;</button>
+                <div class="pcb-carousel-footer">
+                  <div class="pcb-dots" role="tablist" aria-label="Motor Board slide selector"></div>
+                  <p class="pcb-hint">Use arrows</p>
+                </div>
+              </div>
+            </div>
+
+            <article class="pad-controller-copy">
+              <div class="project-brand">
+                <img src="./assets/auv-project-logo.png" alt="AUV project logo" loading="lazy" />
+                <p>Project Trident</p>
+              </div>
+              <h3>Motor Board PCB</h3>
+              <p>
+                Designed and assembled a custom motor board PCB for underwater propulsion testing, combining control electronics and
+                robust power-path hardware into a compact, field-deployable layout.
+              </p>
+              <p>
+                Drove the hardware workflow from CAD through bring-up: bench power validation, microscope-level inspection and rework,
+                subsystem wiring, and integration with the Trident platform and thruster test hardware.
+              </p>
+              <ul class="pad-highlights">
+                <li>Custom PCB layout and assembled prototype bring-up</li>
+                <li>Bench validation, debug, and solder-quality verification</li>
+                <li>Integrated with propulsion hardware for system-level testing</li>
+              </ul>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="zeus-section" data-reveal>
+        <div class="zeus-stage">
+          <figure class="zeus-visual">
+            <img src="./assets/trident-sideview-render.png" alt="Side render of the Trident underwater test platform" loading="lazy" />
+          </figure>
+
+          <div class="zeus-copy">
+            <h2>Trident is a modular under water submarine test platform.</h2>
+          </div>
+        </div>
+
+        <div class="inner">
+          <div class="trident-reel-shell">
+            <div class="trident-reel-head">
+              <div class="trident-reel-intro">
+                <p class="trident-reel-kicker">Project Trident Photo Reel</p>
+                <h3>Inside Trident.</h3>
+              </div>
+
+              <div class="trident-reel-controls" aria-label="Trident reel navigation">
+                <button class="trident-reel-nav" type="button" data-trident-prev aria-label="Previous Trident reel card">&lsaquo;</button>
+                <button class="trident-reel-nav" type="button" data-trident-next aria-label="Next Trident reel card">&rsaquo;</button>
+              </div>
+            </div>
+
+            <div class="trident-reel-showcase" data-trident-reel tabindex="0">
+              <article class="trident-reel-panel trident-reel-panel-dark" data-trident-card>
+                <div class="trident-reel-panel-copy">
+                  <p class="trident-reel-panel-kicker">Platform View</p>
+                  <h4>Trident starts as a system, not just a shell.</h4>
+                  <p>
+                    The platform architecture ties propulsion, control electronics, and enclosure strategy into one modular underwater
+                    test vehicle.
+                  </p>
+                </div>
+                <div class="trident-reel-panel-media trident-reel-panel-media-contain">
+                  <img src="./assets/sub-render.png" alt="Trident render showing internal electronics architecture" loading="lazy" />
+                </div>
+              </article>
+
+              <article class="trident-reel-panel trident-reel-panel-light" data-trident-card>
+                <div class="trident-reel-panel-copy">
+                  <p class="trident-reel-panel-kicker">Physical Test Stand</p>
+                  <h4>This version exists to validate custom electronics, not to go underwater.</h4>
+                  <p>
+                    The physical Trident apparatus is a bench-ready electronics test stand used to evaluate custom embedded hardware,
+                    packaging, and system integration in a controlled environment. A water-sealed test article is planned next.
+                  </p>
+                </div>
+                <div class="trident-reel-panel-media trident-reel-panel-media-contain">
+                  <img src="./assets/sub-side-physical.jpg" alt="Physical side view of the Trident platform" loading="lazy" />
+                </div>
+              </article>
+
+              <article class="trident-reel-panel trident-reel-panel-light" data-trident-card>
+                <div class="trident-reel-panel-copy">
+                  <p class="trident-reel-panel-kicker">Tray Integration</p>
+                  <h4>A closer look at the custom electronics on the tray system integration.</h4>
+                  <p>
+                    This view highlights how the custom electronics package comes together on the tray assembly, showing the physical
+                    layout, board-to-board fit, and integration approach used for the Trident test stand hardware.
+                  </p>
+                </div>
+                <div class="trident-reel-panel-media">
+                  <img src="./assets/motor-board-06-thruster-wiring.png" alt="Motor board connected to underwater thruster hardware" loading="lazy" />
+                </div>
+              </article>
+
+              <article class="trident-reel-panel trident-reel-panel-dark" data-trident-card>
+                <div class="trident-reel-panel-copy">
+                  <p class="trident-reel-panel-kicker">Initial Power-Up</p>
+                  <h4>Initial motor control power-up: there is life.</h4>
+                  <p>
+                    This first bring-up video captures the motor board waking up on the bench, marking the point where the custom
+                    power and control hardware begins responding as a real integrated system.
+                  </p>
+                </div>
+                <div class="trident-reel-panel-media">
+                  <video class="trident-reel-video" controls playsinline preload="metadata">
+                    <source src="./assets/trident-motorboard-powerup.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </article>
+
+              <article class="trident-reel-panel trident-reel-panel-dark" data-trident-card>
+                <div class="trident-reel-panel-copy">
+                  <p class="trident-reel-panel-kicker">CAN Bring-Up</p>
+                  <h4>Initial motor board testing with CAN and control interface integration.</h4>
+                  <p>
+                    This video captures early validation of the motor board as the CAN pathway and control interface come online
+                    together, confirming the board can participate correctly in the wider Trident electronics stack.
+                  </p>
+                </div>
+                <div class="trident-reel-panel-media">
+                  <video class="trident-reel-video" controls playsinline preload="metadata">
+                    <source src="./assets/trident-motorboard-can-test.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </article>
+
+              <article class="trident-reel-panel trident-reel-panel-light" data-trident-card>
+                <div class="trident-reel-panel-copy">
+                  <p class="trident-reel-panel-kicker">Next Mission</p>
+                  <h4>The goal is still to get Trident in the water.</h4>
+                  <p>
+                    Right now school and other work are taking most of the bandwidth, but the project is still moving forward. The
+                    plan is to keep building toward a water-ready version and get Trident in the water in the near future.
+                  </p>
+                </div>
+                <div class="trident-reel-panel-media">
+                  <img src="./assets/trident-future-water-cat.jpg" alt="Cat studying as a playful placeholder for the future Trident water-testing milestone" loading="lazy" />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about-light section-light" data-reveal>
+        <div class="inner">
+          <div class="about-intro-shell">
+            <div class="about-intro-copy">
+              <h2>Get to know Armando.</h2>
+              <p class="photo-book-lead">
+                Electrical engineering student focused on embedded hardware, PCB design, system bring-up, and integration work across
+                rocket avionics and underwater electronics platforms.
+              </p>
+            </div>
+
+            <div class="about-intro-card">
+              <img class="photo-book-portrait" src="./assets/armando-portrait.jpg" alt="Portrait of Armando Zepeda" loading="lazy" />
+              <div>
+                <p class="photo-book-name">Armando Zepeda</p>
+                <p class="photo-book-role">Electrical Engineering Portfolio</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-book-shell">
+            <div class="photo-book-head">
+              <div class="photo-book-intro">
+                <p class="photo-book-kicker">Project Photo Book</p>
+                <h2>Project Photo Book</h2>
+                <p class="photo-book-lead">
+                  A premium visual walkthrough of the boards, bench work, bring-up moments, and integration details that define the
+                  portfolio.
+                </p>
+              </div>
+
+              <div class="photo-book-controls" aria-label="Photo Book navigation">
+                <button class="photo-book-nav" type="button" data-photo-book-prev aria-label="Previous showcase card">&lsaquo;</button>
+                <button class="photo-book-nav" type="button" data-photo-book-next aria-label="Next showcase card">&rsaquo;</button>
+              </div>
+            </div>
+
+            <div class="photo-book-showcase" data-photo-book tabindex="0">
+              <article class="photo-book-panel photo-book-panel-dark photo-book-panel-team" data-photo-book-card>
+                <div class="photo-book-panel-copy">
+                  <p class="photo-book-panel-kicker">Operations</p>
+                  <h3>Cold-flow and static-fire decisions happen in real time.</h3>
+                  <p>At the controls, hardware work turns into live operations, where clean interfaces and trustworthy systems support every call.</p>
+                </div>
+                <div class="photo-book-panel-media">
+                  <img src="./assets/operator-hsp-controls.jpg" alt="Armando operating controls during a cold-flow or static-fire test" loading="lazy" />
+                </div>
+              </article>
+
+              <article class="photo-book-panel photo-book-panel-light" data-photo-book-card>
+                <div class="photo-book-panel-copy">
+                  <p class="photo-book-panel-kicker">CAN Validation</p>
+                  <h3>UI feedback confirms the CAN system is talking the way it should.</h3>
+                  <p>Early validation through the interface helps prove command flow, system response, and communication integrity before wider integration.</p>
+                </div>
+                <div class="photo-book-panel-media">
+                  <video
+                    class="photo-book-panel-video"
+                    src="./assets/can-ui-validation.mov"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                  ></video>
+                </div>
+              </article>
+
+              <article class="photo-book-panel photo-book-panel-dark" data-photo-book-card>
+                <div class="photo-book-panel-copy">
+                  <p class="photo-book-panel-kicker">Avionics Team</p>
+                  <h3>The best test milestones are built with the Avionics lads beside you.</h3>
+                  <p>Behind every cold-flow or static-fire win is a crew handling electronics, troubleshooting, and test-day execution together.</p>
+                </div>
+                <div class="photo-book-panel-media">
+                  <img src="./assets/avionics-lads-team.jpg" alt="Armando and the Avionics team together after testing" loading="lazy" />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="experience section-light" data-reveal>
+        <div class="inner">
+          <div class="experience-head">
+            <h2>Work Experience</h2>
+          </div>
+
+          <article class="experience-card">
+            <div class="experience-logo-wrap">
+              <img src="./assets/crystal-group-logo.jpg" alt="Crystal Group logo" loading="lazy" />
+            </div>
+            <div class="experience-copy">
+              <p class="experience-kicker">Summer 2026 // Hiawatha, Iowa</p>
+              <h3>Crystal Group EE Summer Intern 2026</h3>
+              <p>
+                Electrical Engineering internship focused on ruggedized systems, hands-on lab execution, and deployment-oriented
+                hardware support.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="inner footer-inner">
+        <div>
+          <p class="footer-brand">ARMANDO ZEPEDA</p>
+          <p>Copyright &copy; <span id="year"></span>. All rights reserved.</p>
+        </div>
+
+        <div>
+          <p class="footer-heading">Contact</p>
+          <a class="footer-link-icon" href="mailto:azepe046@ucr.edu" aria-label="Email Armando Zepeda">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M3 6.75A1.75 1.75 0 0 1 4.75 5h14.5A1.75 1.75 0 0 1 21 6.75v10.5A1.75 1.75 0 0 1 19.25 19H4.75A1.75 1.75 0 0 1 3 17.25V6.75Zm1.5.31v.18l7.5 5.25 7.5-5.25v-.18a.25.25 0 0 0-.25-.25H4.75a.25.25 0 0 0-.25.25Zm15 2.01-6.64 4.65a1.5 1.5 0 0 1-1.72 0L4.5 9.07v8.18c0 .14.11.25.25.25h14.5c.14 0 .25-.11.25-.25V9.07Z" />
+            </svg>
+            <span>azepe046@ucr.edu</span>
+          </a>
+          <a
+            class="footer-link-icon"
+            href="https://www.linkedin.com/in/armando-zepedaucr/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Armando Zepeda LinkedIn profile"
+          >
+            <img src="./assets/linkedin-icon-custom.png" alt="" aria-hidden="true" />
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
