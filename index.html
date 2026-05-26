@@ -30,12 +30,14 @@
     </header>
 
     <main>
-      <section id="home" class="hero">
-        <div class="hero-bg" aria-hidden="true">
+      <section id="home" class="hero hero-intro">
+        <span id="about" class="hero-anchor" aria-hidden="true"></span>
+        <div class="hero-bg hero-intro-bg" aria-hidden="true">
           <video
-            class="hero-video"
+            class="hero-video hero-intro-video"
             autoplay
             muted
+            loop
             playsinline
             webkit-playsinline="true"
             preload="metadata"
@@ -45,16 +47,48 @@
           >
             <source src="./assets/superEpicTrailer.mp4" type="video/mp4" />
           </video>
-          <div class="hero-object hero-object-one"></div>
-          <div class="hero-object hero-object-two"></div>
-          <div class="hero-horizon"></div>
         </div>
 
-        <div class="hero-content">
-          <h1>
-            <span>Armando Zepeda Electrical Engineering Portfolio</span>
-          </h1>
-          <p class="hero-subtitle">Designing robust PCB hardware for real-world deployment.</p>
+        <div class="hero-content hero-content-intro">
+          <div class="about-intro-shell hero-intro-shell">
+            <div class="about-intro-copy">
+              <h2>Get to know Armando.</h2>
+              <p class="photo-book-lead">
+                Student at UCR focused on electronics and designing PCBs for my rocketry team. Outside of engineering, you'll usually
+                find me training judo and wrestling, or hunting down the next coffee shop worth ranking for pastries.
+              </p>
+              <div class="about-intro-meta" aria-label="Armando introduction details">
+                <span>University of California, Riverside</span>
+                <span>Class of June 2027</span>
+                <a class="about-intro-meta-link" href="https://www.linkedin.com/in/armando-zepedaucr/" target="_blank" rel="noreferrer">
+                  <svg class="about-intro-meta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M6.94 8.5A1.56 1.56 0 1 1 6.93 5.38a1.56 1.56 0 0 1 .01 3.12ZM5.6 9.75h2.66V18H5.6V9.75Zm4.34 0h2.55v1.13h.04c.35-.67 1.22-1.38 2.5-1.38 2.67 0 3.17 1.76 3.17 4.06V18h-2.66v-3.92c0-.94-.02-2.14-1.3-2.14-1.3 0-1.5 1.02-1.5 2.07V18H9.94V9.75Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a class="about-intro-meta-link" href="mailto:azepe046@ucr.edu">
+                  <svg class="about-intro-meta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M4 6.75h16A1.25 1.25 0 0 1 21.25 8v8A1.25 1.25 0 0 1 20 17.25H4A1.25 1.25 0 0 1 2.75 16V8A1.25 1.25 0 0 1 4 6.75Zm0 1.5a.24.24 0 0 0-.25.25v.16l8.25 4.88 8.25-4.88V8.5a.24.24 0 0 0-.25-.25H4Zm16 7.5a.24.24 0 0 0 .25-.25V10.4l-7.61 4.5a1.25 1.25 0 0 1-1.28 0l-7.61-4.5v5.1c0 .14.11.25.25.25H20Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="about-intro-card hero-profile-card">
+              <img class="photo-book-portrait" src="./assets/armando-portrait.jpg" alt="Portrait of Armando Zepeda" loading="lazy" />
+              <div class="hero-profile-copy">
+                <p class="photo-book-name">Armando Zepeda</p>
+                <p class="photo-book-role">Embedded Hardware | Aerospace &amp; Underwater Systems</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <a class="scroll-cue" href="#systems">
@@ -83,7 +117,7 @@
                 <div class="program-overview-copy">
                   <p class="program-overview-role">Project Trident | Hardware Design Lead</p>
                   <p class="program-overview-summary">
-                    Designing custom underwater vehicle electronics spanning power, control, integration, and propulsion-system hardware.
+                    Designing custom underwater vehicle electronics spanning power, control, integration, and embedded subsystem hardware.
                   </p>
                 </div>
                 <p class="program-overview-meta">AUV</p>
@@ -115,7 +149,7 @@
                     </figure>
                     <figure class="pcb-slide">
                       <img
-                        src="./assets/pad-controller-field.jpg"
+                        src="./assets/pad-controller-operational-setup.png"
                         alt="Pad Controller deployed in outdoor operations setup"
                         loading="lazy"
                       />
@@ -140,13 +174,8 @@
               <p class="project-label">Project Poseidon // Avionics Hardware Lead</p>
               <h3>Pad Controller</h3>
               <p>
-                Designed a 4-layer STM32-based Pad Controller PCB to command liquid rocket valve actuation and ignition. Integrated
-                CAN and UART interfaces with ground support equipment for reliable control and telemetry flow during operations.
-              </p>
-              <p>
-                Defined PCB stackup, component selection, and mixed-signal routing, then supported hardware bring-up and validation
-                using staged power-up, oscilloscopes, multimeters, and bench supplies before field integration. Contributed to bring-up
-                and verification across 10+ avionics PCBs in the campaign.
+                Designed a 4-layer STM32-based control PCB for liquid rocket valve actuation and ignition systems. Integrated
+                CAN/UART communications and supported avionics bring-up through cold-flow and static-fire testing.
               </p>
               <ul class="pad-highlights">
                 <li>4-layer STM32 mixed-signal control board</li>
@@ -220,17 +249,17 @@
               <p class="project-label">Project Clementine // Ground Information Controller</p>
               <h3>Ground Information Controller (GIC)</h3>
               <p>
-                Designed an STM32-based ground interface PCB integrating Ethernet, CAN, UART, USB, SPI Flash, and MicroSD to support
-                engine telemetry, valve control, and high/full-speed data logging in a single field-ready controller.
+                Designed an STM32-based ground interface PCB integrating Ethernet, CAN, UART, USB, SPI Flash, and MicroSD for
+                rocket telemetry, valve control, and high-speed data logging.
               </p>
               <p>
-                Completed the workflow from CAD to assembly and test bench validation, including CAN communications verification,
-                firmware integration, and end-to-end interface bring-up across the ground test stack.
+                Supported hardware bring-up, CAN communications validation, assembly, and bench testing across the ground support
+                avionics stack.
               </p>
               <ul class="pad-highlights">
-                <li>Integrated Ethernet, CAN, UART, USB, SPI Flash, and MicroSD</li>
-                <li>STM32 control architecture for telemetry and actuator pathways</li>
-                <li>Hands-on assembly, debug, and communication bench testing</li>
+                <li>Ethernet, CAN, UART, USB, SPI Flash, and MicroSD integration</li>
+                <li>STM32-based telemetry and valve-control architecture</li>
+                <li>Hardware bring-up, assembly, and bench validation</li>
               </ul>
             </article>
           </div>
@@ -275,17 +304,17 @@
               <p class="project-label">Project Clementine // Ground Interface Revision</p>
               <h3>GIC LITE</h3>
               <p>
-                Revised the ground interface PCB into a more compact GIC LITE architecture, reducing board area by 57% while
-                expanding control and protection capability and reducing BOM cost.
+                Redesigned the original ground interface PCB into a more compact GIC LITE platform, reducing board area by 57%
+                while improving protection features and lowering BOM cost.
               </p>
               <p>
-                Added 3-channel MOSFET servo actuation, dual pyro ignition firing circuits, fused protection on the 3.3V and 8V
-                rails, and high-side MOSFET load switching.
+                Added 3-channel servo actuation, dual pyro ignition support, fused 3.3V/8V power rails, and high-side MOSFET
+                load switching.
               </p>
               <ul class="pad-highlights">
-                <li>57% smaller board footprint than the previous ground interface revision</li>
-                <li>3-channel servo actuation plus dual pyro ignition firing support</li>
-                <li>Fused rails, high-side load switching, and Ethernet telemetry relay</li>
+                <li>57% smaller board footprint than the previous GIC revision</li>
+                <li>3-channel servo actuation with dual pyro ignition support</li>
+                <li>Fused power rails and high-side load switching</li>
               </ul>
             </article>
           </div>
@@ -346,18 +375,17 @@
               <p class="project-label">Project Clementine // Embedded Hardware Integration</p>
               <h3>Sensor Panel Connector Interface</h3>
               <p>
-                Designed a sensor panel connector interface for the DAQ box, creating a clean and serviceable front-end connection
-                point between external sensors and the data acquisition hardware.
+                Designed a modular sensor interface system for the rocket DAQ enclosure, enabling organized integration between
+                external instrumentation and onboard data acquisition hardware.
               </p>
               <p>
-                The interface set included dedicated PCB layouts for 4-pin, 3-pin, and 2-pin connector groups, allowing each sensor
-                channel type to integrate into the enclosure with clear routing, easier troubleshooting, and more reliable system
-                bring-up during test operations.
+                Developed custom connector interface PCBs to simplify sensor routing, improve maintainability, and accelerate
+                hardware bring-up and troubleshooting during test operations.
               </p>
               <ul class="pad-highlights">
-                <li>Integrated sensor-panel interface directly into the DAQ box</li>
-                <li>Custom connector PCBs for 4-pin, 3-pin, and 2-pin interfaces</li>
-                <li>Cleaner routing, simpler maintenance, and faster hardware debug</li>
+                <li>Modular sensor-panel integration for the DAQ system</li>
+                <li>Custom interface PCBs for instrumentation routing</li>
+                <li>Improved maintainability, troubleshooting, and test operations</li>
               </ul>
             </article>
           </div>
@@ -410,18 +438,17 @@
               <p class="project-label">Project Clementine // Actuation Control Hardware</p>
               <h3>Servo Board PCB</h3>
               <p>
-                Designed a dedicated servo control PCB to drive multiple actuation channels from a compact embedded platform, combining
-                local control electronics, connectorized outputs, and clean routing for reliable subsystem integration.
+                Designed a multi-channel servo control PCB for embedded actuation systems, integrating CAN communications, onboard
+                power circuitry, and dedicated servo output interfaces.
               </p>
               <p>
-                Developed the board from CAD through fabrication, building out the multi-channel servo pathway alongside CAN-linked
-                interfaces and power circuitry to support bench validation and future integration into larger avionics and controls
-                systems.
+                Took the design from PCB layout through manufactured hardware and bench validation, supporting reliable subsystem
+                integration within the rocket avionics architecture.
               </p>
               <ul class="pad-highlights">
-                <li>Multi-channel servo actuation board with connectorized outputs</li>
-                <li>Integrated control, power, and CAN-linked interface architecture</li>
-                <li>Carried from PCB layout to manufactured hardware</li>
+                <li>Multi-channel embedded servo actuation platform</li>
+                <li>Integrated CAN, power, and control architecture</li>
+                <li>Developed from PCB layout through manufactured hardware</li>
               </ul>
             </article>
           </div>
@@ -453,7 +480,7 @@
                         alt="Motor board bench bring-up with lab power supply"
                         loading="lazy"
                       />
-                      <figcaption>Bench power-up and first electrical validation</figcaption>
+                      <figcaption>Firmware bring up ( LED Test )</figcaption>
                     </figure>
                     <figure class="pcb-slide">
                       <img
@@ -461,7 +488,7 @@
                         alt="Microscope inspection of motor board solder joints"
                         loading="lazy"
                       />
-                      <figcaption>Microscope inspection and solder-quality checks</figcaption>
+                      <figcaption>Thruster integration</figcaption>
                     </figure>
                     <figure class="pcb-slide">
                       <img
@@ -489,17 +516,17 @@
               </div>
               <h3>Motor Board PCB</h3>
               <p>
-                Designed and assembled a custom motor board PCB for underwater propulsion testing, combining control electronics and
-                robust power-path hardware into a compact, field-deployable layout.
+                Designed and assembled a custom motor control PCB for underwater subsystem testing, integrating embedded control
+                electronics and high-current power circuitry into a compact hardware platform.
               </p>
               <p>
-                Drove the hardware workflow from CAD through bring-up: bench power validation, microscope-level inspection and rework,
-                subsystem wiring, and integration with the Trident platform and thruster test hardware.
+                Led the hardware workflow from CAD through bring-up, including bench power validation, rework, subsystem wiring,
+                and integration with the Trident electronics test platform.
               </p>
               <ul class="pad-highlights">
-                <li>Custom PCB layout and assembled prototype bring-up</li>
-                <li>Bench validation, debug, and solder-quality verification</li>
-                <li>Integrated with propulsion hardware for system-level testing</li>
+                <li>Custom motor-control PCB with integrated power architecture</li>
+                <li>Bench validation, debug, and hardware rework</li>
+                <li>Integrated with subsystem hardware for system-level testing</li>
               </ul>
             </article>
           </div>
@@ -538,8 +565,8 @@
                   <p class="trident-reel-panel-kicker">Platform View</p>
                   <h4>Trident starts as a system, not just a shell.</h4>
                   <p>
-                    The platform architecture ties propulsion, control electronics, and enclosure strategy into one modular underwater
-                    test vehicle.
+                    The platform architecture ties embedded control electronics, power distribution, and mechanical packaging into
+                    one modular underwater test platform.
                   </p>
                 </div>
                 <div class="trident-reel-panel-media trident-reel-panel-media-contain">
@@ -550,10 +577,11 @@
               <article class="trident-reel-panel trident-reel-panel-light" data-trident-card>
                 <div class="trident-reel-panel-copy">
                   <p class="trident-reel-panel-kicker">Physical Test Stand</p>
-                  <h4>This version exists to validate custom electronics, not to go underwater.</h4>
+                  <h4>This platform is designed to validate custom electronics before sealed underwater operation.</h4>
                   <p>
-                    The physical Trident apparatus is a bench-ready electronics test stand used to evaluate custom embedded hardware,
-                    packaging, and system integration in a controlled environment. A water-sealed test article is planned next.
+                    The physical Trident apparatus serves as a bench-ready electronics test platform used to evaluate embedded
+                    hardware, packaging strategy, and subsystem integration in a controlled environment. The next revision will focus
+                    on sealed underwater operation.
                   </p>
                 </div>
                 <div class="trident-reel-panel-media trident-reel-panel-media-contain">
@@ -566,8 +594,8 @@
                   <p class="trident-reel-panel-kicker">Tray Integration</p>
                   <h4>A closer look at the custom electronics on the tray system integration.</h4>
                   <p>
-                    This view highlights how the custom electronics package comes together on the tray assembly, showing the physical
-                    layout, board-to-board fit, and integration approach used for the Trident test stand hardware.
+                    This integration stage validates subsystem packaging, power distribution, board fitment, and electronics tray
+                    architecture within the Trident test platform.
                   </p>
                 </div>
                 <div class="trident-reel-panel-media">
@@ -580,8 +608,8 @@
                   <p class="trident-reel-panel-kicker">Initial Power-Up</p>
                   <h4>Initial motor control power-up: there is life.</h4>
                   <p>
-                    This first bring-up video captures the motor board waking up on the bench, marking the point where the custom
-                    power and control hardware begins responding as a real integrated system.
+                    This first bring-up captures the motor board waking up on the bench, marking the transition from standalone
+                    hardware to an integrated embedded control system.
                   </p>
                 </div>
                 <div class="trident-reel-panel-media">
@@ -596,8 +624,8 @@
                   <p class="trident-reel-panel-kicker">CAN Bring-Up</p>
                   <h4>Initial motor board testing with CAN and control interface integration.</h4>
                   <p>
-                    This video captures early validation of the motor board as the CAN pathway and control interface come online
-                    together, confirming the board can participate correctly in the wider Trident electronics stack.
+                    This validation stage confirms CAN communications, control-interface functionality, and integration within the
+                    broader Trident electronics stack.
                   </p>
                 </div>
                 <div class="trident-reel-panel-media">
@@ -612,8 +640,9 @@
                   <p class="trident-reel-panel-kicker">Next Mission</p>
                   <h4>The goal is still to get Trident in the water.</h4>
                   <p>
-                    Right now school and other work are taking most of the bandwidth, but the project is still moving forward. The
-                    plan is to keep building toward a water-ready version and get Trident in the water in the near future.
+                    Right now school and ongoing engineering work are taking most of the bandwidth, but development is still moving
+                    forward. The long-term goal remains a water-ready Trident platform with integrated custom electronics and
+                    validated subsystem hardware.
                   </p>
                 </div>
                 <div class="trident-reel-panel-media">
@@ -626,24 +655,6 @@
       </section>
       <section id="about" class="about-light section-light" data-reveal>
         <div class="inner">
-          <div class="about-intro-shell">
-            <div class="about-intro-copy">
-              <h2>Get to know Armando.</h2>
-              <p class="photo-book-lead">
-                Electrical engineering student focused on embedded hardware, PCB design, system bring-up, and integration work across
-                rocket avionics and underwater electronics platforms.
-              </p>
-            </div>
-
-            <div class="about-intro-card">
-              <img class="photo-book-portrait" src="./assets/armando-portrait.jpg" alt="Portrait of Armando Zepeda" loading="lazy" />
-              <div>
-                <p class="photo-book-name">Armando Zepeda</p>
-                <p class="photo-book-role">Electrical Engineering Portfolio</p>
-              </div>
-            </div>
-          </div>
-
           <div class="photo-book-shell">
             <div class="photo-book-head">
               <div class="photo-book-intro">
