@@ -738,7 +738,8 @@ h1 span {
   grid-template-rows: 1fr auto;
 }
 
-.pcb-slide img {
+.pcb-slide img,
+.pcb-slide video {
   width: 100%;
   height: min(62vh, 530px);
   object-fit: contain;
@@ -2425,7 +2426,8 @@ h1 span {
     min-height: 340px;
   }
 
-  .pcb-slide img {
+  .pcb-slide img,
+.pcb-slide video {
     height: 420px;
   }
 
@@ -2663,7 +2665,8 @@ h1 span {
     min-height: auto;
   }
 
-  .pcb-slide img {
+  .pcb-slide img,
+.pcb-slide video {
     height: auto;
     aspect-ratio: 4 / 3;
   }

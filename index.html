@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
       name="description"
       content="Armando Zepeda Electrical Engineering portfolio highlighting autonomous systems, controls, and technical execution."
     />
-    <link rel="stylesheet" href="./styles.css?v=20260525b" />
+    <link rel="stylesheet" href="./styles.css?v=20260924videos" />
   </head>
   <body>
     <header class="topbar">
@@ -128,7 +128,7 @@
 
           <div class="pad-controller-showcase">
             <div class="pad-controller-media">
-              <div class="pcb-carousel" data-carousel aria-label="Pad Controller photo carousel">
+              <div class="pcb-carousel" data-carousel aria-label="Pad Controller media carousel">
                 <div class="pcb-carousel-viewport" tabindex="0">
                   <div class="pcb-carousel-track">
                     <figure class="pcb-slide">
@@ -148,17 +148,23 @@
                       <figcaption>Field enclosure integration</figcaption>
                     </figure>
                     <figure class="pcb-slide">
-                      <img
-                        src="./assets/pad-controller-field.jpg"
-                        alt="Pad Controller deployed in outdoor operations setup"
-                        loading="lazy"
-                      />
-                      <figcaption>Operational deployment setup</figcaption>
+                      <video controls playsinline preload="none" poster="./assets/pad-controller-static-fire.jpg" aria-label="Pad Controller static-fire test">
+                        <source src="./assets/pad-controller-static-fire.mp4" type="video/mp4" />
+                        <a href="./assets/pad-controller-static-fire.mp4">Watch the static-fire test</a>
+                      </video>
+                      <figcaption>Static-fire test with the new control system</figcaption>
+                    </figure>
+                    <figure class="pcb-slide">
+                      <video controls playsinline preload="none" poster="./assets/pad-controller-cold-flow.jpg" aria-label="Pad Controller cold-flow test">
+                        <source src="./assets/pad-controller-cold-flow.mp4" type="video/mp4" />
+                        <a href="./assets/pad-controller-cold-flow.mp4">Watch the cold-flow test</a>
+                      </video>
+                      <figcaption>Successful cold-flow test with custom PCBs</figcaption>
                     </figure>
                   </div>
                 </div>
-                <button class="pcb-nav prev" type="button" aria-label="Previous Pad Controller photo">&lsaquo;</button>
-                <button class="pcb-nav next" type="button" aria-label="Next Pad Controller photo">&rsaquo;</button>
+                <button class="pcb-nav prev" type="button" aria-label="Previous Pad Controller media">&lsaquo;</button>
+                <button class="pcb-nav next" type="button" aria-label="Next Pad Controller media">&rsaquo;</button>
                 <div class="pcb-carousel-footer">
                   <div class="pcb-dots" role="tablist" aria-label="Pad Controller slide selector"></div>
                   <p class="pcb-hint">Use arrows</p>
@@ -774,6 +780,6 @@
       </div>
     </footer>
 
-    <script src="./script.js?v=20260525b"></script>
+    <script src="./script.js?v=20260924videos"></script>
   </body>
 </html>

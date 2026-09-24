@@ -479,6 +479,10 @@ const initPcbCarousel = (carousel) => {
 
     slides.forEach((slide, slideIndex) => {
       slide.setAttribute("aria-hidden", String(slideIndex !== currentIndex));
+      slide.inert = slideIndex !== currentIndex;
+      if (slideIndex !== currentIndex) {
+        slide.querySelectorAll("video").forEach((video) => video.pause());
+      }
     });
   };
 
@@ -491,6 +495,9 @@ const initPcbCarousel = (carousel) => {
   });
 
   viewport.addEventListener("keydown", (event) => {
+    if (event.target.closest("video")) {
+      return;
+    }
     if (event.key === "ArrowRight") {
       event.preventDefault();
       updateSlide(currentIndex + 1);
