@@ -167,7 +167,9 @@ const initLayeredShowcase = ({
       }
 
       if (index === activeIndex) {
-        void mediaVideo.play().catch(() => {});
+        if (!mediaVideo.hasAttribute("data-manual-play")) {
+          void mediaVideo.play().catch(() => {});
+        }
       } else {
         mediaVideo.pause();
         mediaVideo.currentTime = 0;
@@ -202,6 +204,9 @@ const initLayeredShowcase = ({
   });
 
   showcase.addEventListener("keydown", (event) => {
+    if (event.target.closest("video")) {
+      return;
+    }
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       navigate(-1);

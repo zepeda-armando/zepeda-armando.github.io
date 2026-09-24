@@ -1728,6 +1728,12 @@ h1 span {
   padding: clamp(1.4rem, 3vw, 2.4rem);
 }
 
+.photo-book-panel-video.photo-book-launch-video {
+  object-fit: contain;
+  transform: none;
+  background: #0b0e11;
+}
+
 .photo-book-panel-dark {
   background: linear-gradient(180deg, #040506, #0e1114);
   color: #f5f7fa;
